@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,13 +14,13 @@ class _HomeScreenState extends State<HomeScreen> {
       _selectedIndex = index;
       switch (index) {
         case 0:
-          Navigator.pushNamed(context, '/');
+          context.go('/');
           break;
         case 1:
-          Navigator.pushNamed(context, '/search');
+          context.go('/search?query=example1111');
           break;
         case 2:
-          Navigator.pushNamed(context, '/profile');
+          context.go('/profile?query=example1111');
           break;
       }
     });

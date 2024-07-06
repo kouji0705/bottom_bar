@@ -8,9 +8,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: routes,
+    return MaterialApp.router(
+      routerConfig: router,
     );
   }
 }
